@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+.main-head{
+    font-family: 'Pattaya', sans-serif;
+}
+body{ background-color: black;
+text-align: center;
+color: white;}
+.image{
+    float: left;
+    border: 1px solid red;
+}
+.terminal{
+    background-color: blue;
+    border: 1px solid blue;
+    width: 30%; height: 30%;
+   float: left;
+  
+}
+.lifeofpie{
+    background-color: red;
+    border: 1pix solid red;
+    width: 30%; height:30$;
+    float: left;
+}
+.Mucize{
+    background-color: blue;
+    border: 1px solid blue;
+    width: 30%; height: 30%;
+   float: left;
+}

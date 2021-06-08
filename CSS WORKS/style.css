@@ -1,0 +1,27 @@
+body{ background-color: black;}
+.main_header{
+    text-align: center;
+    color:white;
+    text-decoration: underline;
+}
+.state{
+    border-style: solid;
+    border-color: white;
+    border-width: 1px;
+    color: whitesmoke;
+    background-color: turquoise;
+    width: 400px; height: 300px;
+    text-align: center;
+    float: left;
+}
+.tvm{
+    background-color: tomato;
+}
+.state2{
+   border: 1px solid white ;
+    background-color: violet;
+    color: yellow;
+    text-align: center;
+    width: 400px; height: 300px;
+    float: left;
+}

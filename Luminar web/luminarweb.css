@@ -1,0 +1,54 @@
+.r1{
+    height: 40px;
+    color: white;
+    border: 1px solid #5e068a;
+background-color: #5e068a;
+padding-left: 200px;
+align-items: center;
+
+}
+.r1 a{
+    text-decoration: none;
+    color: white;
+}
+.nav1{
+    position: relative;
+    left: 400px;
+}
+.nav-hd{
+    background-color: white;
+    }
+.nav-item a{ color: black;
+font-size: 15px;
+font-weight: 700;
+}
+.navbar-brand img{ padding-left: 50px;}
+h1, p{ text-align: left;}
+.pressbt{ position: relative;
+left: 20px;}
+.btn-1{ 
+   background-color: #5e068a ;}
+.r2{ height: 600px; 
+font-size: 15px; 
+line-height: 28px;
+}
+.c1{position: relative;
+left: 100px;
+top: 100px;}
+.course1{text-align: left;
+padding: 40px;}
+.course1 a{font-size: 25px;
+color: #5e068a;
+font-weight: 700;
+line-height: 1.5;
+}
+.course1 p{ line-height: 1.8;}
+.line1{ padding-top: 20px;}
+.but1 button{
+    position: relative;
+    left: 500px;
+    border: 1px solid #5e068a;
+}
+.but1 button:hover{
+     background-color: #5e068a;
+}

@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+.main-head{
+    font-family: 'Pattaya', sans-serif;
+}
+.movie{
+    border: 1px solid brown;
+    width: 24%; height: 450px;
+    float: left;
+}
+.movie img{
+    width: 100%;
+    height: 400px;
+}
+.row-2{
+   
+    width: 100%; 
+    
+}
+.col{
+    border: 1px solid brown;
+    width: 24%;
+    float: left;
+}

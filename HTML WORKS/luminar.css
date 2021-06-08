@@ -1,0 +1,15 @@
+.lum-1{
+    padding: 20px;
+}
+.box{
+    width: 90%x;
+    height: 50px;
+    background-color: cornflowerblue;
+       border: 1px solid black;
+display: flex;
+justify-content: space-around;
+padding: 10px
+}
+.box a{  text-decoration: none;
+color: black;}
+.pics{ display: flex;}
