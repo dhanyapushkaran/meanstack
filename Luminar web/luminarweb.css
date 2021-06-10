@@ -52,3 +52,17 @@ line-height: 1.5;
 .but1 button:hover{
      background-color: #5e068a;
 }
+.r-last{
+    height: 400px;
+    background-color: #5e068a;
+    margin-top: 20px;
+   
+}
+.r-last a{
+    margin-left: 20px;
+    padding: 5px;
+}
+.list_foot a{
+text-decoration: none;
+color: white;
+}
