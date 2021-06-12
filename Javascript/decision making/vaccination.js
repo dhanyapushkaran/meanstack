@@ -8,8 +8,12 @@
 //     else if (num%5==0){
 //         console.log("buz");
 //     }
-var num=15;
+var num=10;
 var res="";
-if(num%5){
-    res+=
+if(num%3==0){
+    res+="fiz";
 }
+if (num%5==0) {
+    res+="buz";
+}
+console.log(res);
