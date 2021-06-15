@@ -14,4 +14,4 @@ while (num!=0) {
     // console.log(digit);
    num=Math.floor(num/10);
     }
-    console.log(res);
+    console.log(res); 
