@@ -6,8 +6,15 @@ for (let i = 1; i <= 5; i++) {
     }
     if (i == 1) {
         console.log("      *");
-  
     }
+
+    else if (i == 5) {
+            for (let j = 0; j < 6; j++) {
+                str += "* "
+            }
+        
+    }
+    else {
     for (let k = 1; k < 2; k++) {
         str += "*";
     }
@@ -19,8 +26,8 @@ for (let i = 1; i <= 5; i++) {
     for (let m = 1; m < 2; m++) {
         str += " *";
     }
+}
     console.log(str);
 }
-  
 
-console.log("* * * * * * *");
+
