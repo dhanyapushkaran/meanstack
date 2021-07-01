@@ -22,11 +22,11 @@ var search=products.find(item=>item.name=="potatto")
 //console.log(search);
 
 //sort
-//var sort_qty=products.sort((item1,item2)=>item2.aval_qty-item1.aval_qty)
+var sort_qty=products.sort((item1,item2)=>item2.aval_qty-item1.aval_qty)
 //console.log(sort_qty);
 
 //sort using foreach()
- //products.sort((item1,item2)=>item2.aval_qty-item1.aval_qty).forEach(item=>console.log(item))
+ products.sort((item1,item2)=>item2.aval_qty-item1.aval_qty).forEach(item=>console.log(item))
 
  products.sort((item1,item2)=>item2.aval_qty-item1.aval_qty).forEach(item=>{
      if(item.aval_qty>0){
