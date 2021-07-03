@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <h1>JavaScript Doc</h1>
+    <h1 id="htwo">DocumentObjecModel</h1>
+    <h2>DocumentObjecModel</h2>
+    <ul>
+        <li class="lit">document.getElementsByTagName()</li> 
+        <li class="lit" id="second">document.getElementById()</li>
+        <li class="lit">3</li>
+
+    </ul>
+</body>
+<script>
+    var hone=document.getElementsByTagName("h1");
+    for(let tag of hone){
+        tag.style.color="red";
+    }
+
+    var hto=document.getElementById("htwo")
+    hto.style.color="green"
+
+    // var lit=document.getElementsByClassName("lit")
+    // for(let tag of lit){
+    //     tag.style.color="blue";
+    // }
+    //second.style.color="green"  //if id no need to use getelemtbyid,since it is unique.
+
+    // var lis=document.querySelectorAll("li")
+    // for( let tag of lis){
+    //     tag.style.color="purple"
+    // }
+
+    var lis=document.querySelector("#second")
+    lis.style.color="blue"
+
+    var htwo=document.querySelector("h2")
+    htwo.textContent="document method object model"
+    htwo.style.color="red"
+    htwo.innerHTML="<em> document method object model</em>"
+</script>
+</html>

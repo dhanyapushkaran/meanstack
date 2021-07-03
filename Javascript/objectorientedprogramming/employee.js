@@ -15,6 +15,9 @@ class Employee{
 // var emp4= new Employee(103,"jio","HR",32000,3)
 // var emp5= new Employee(104,"dev","executive",20000,3)
 
+// var Emp=|[]
+// Emp.push(emp1,emp2,emp3,emp4,emp5)
+
 var Emp=[new Employee(100,"ravi","developer",20000,1),
          new Employee(101,"ram","quality analyst",25000,3), 
          new Employee(102,"sam","developer",22000,2),

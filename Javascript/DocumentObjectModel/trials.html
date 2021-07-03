@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java Script</h1>
+    <h1 class="h2nd">Document Object Model</h1>
+    <ul>
+        <li id="list1">Dhanya</li>
+        <li id="list2">M.Tech</li>
+        <li>Electronics and Communicatio</li>
+    </ul>
+</body>
+
+<script>
+    var hone=document.getElementsByTagName("h1")
+    for(let tag of hone){
+        tag.style.color="red"
+    }
+
+    var hone1=document.getElementsByClassName("h2nd")
+    for(let tag of hone1){
+        tag.style.color="green"
+    }
+   //list1.style.color="blue"
+   var list=document.querySelector("#list2")
+   list.style.color="purple"
+
+   var hone2=document.querySelector("h1")
+   //hone2.textContent="Java Script Programs"
+   hone2.innerHTML="<em>Java Script Programs</em>"
+   
+</script>
+</html>

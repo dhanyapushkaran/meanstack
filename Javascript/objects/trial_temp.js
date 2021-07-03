@@ -1,26 +1,32 @@
-var products = [
-    { code: 1000, name: "garlic", mrp: 120, aval_qty: 10 },
-    { code: 1001, name: "chilly", mrp: 80, aval_qty: 5 },
-    { code: 1002, name: "tomatto", mrp: 35, aval_qty: 20 },
-    { code: 1003, name: "onion", mrp: 40, aval_qty: 37 },
-    { code: 1004, name: "potatto", mrp: 45, aval_qty: 40 },
-    { code: 1005, name: "banana", mrp: 55, aval_qty: 60 },
-    { code: 1006, name: "brinjal", mrp: 43, aval_qty: 2 },
-    { code: 1007, name: "beetroot", mrp: 38, aval_qty: 5 },
-    { code: 1008, name: "carrot", mrp: 60, aval_qty: 0 },
-    { code: 1009, name: "bittergod", mrp: 50, aval_qty: 5 },
+var temperature=[
+    {district:"tvm",temprature:25},
+    {district:"kollam",temprature:27},
+    {district:"kottayam",temprature:24},
+    {district:"ekm",temprature:27},
+    {district:"tsr",temprature:25},
+    {district:"pkd",temprature:30},
+    {district:"tvm",temprature:27},
+    {district:"kollam",temprature:25},
+    {district:"kottayam",temprature:28},
+    {district:"ekm",temprature:29},
+    {district:"tsr",temprature:30},
+    {district:"pkd",temprature:31},
 
 ]
-var Prdt_Price=[]
-for(let data of products ){
-    if(!( data.name in Prdt_Price)){
-        Prdt_Price[data["name"]]=data["mrp"]
+var weather={}
+for(let data of temperature ){
+    dist=data["district"] //dist=tvm
+    temp=data["temprature"]
+    if(!(dist in weather)){
+        weather[dist]=temp
+    }
+    else{
+        old_temp=weather[dist]
+        if(weather[dist]<temp){
+            weather[dist]=temp
+        }
     }
 }
-console.log(Prdt_Price);
-function sort_price(data){
-return Object.entries(data).sort((price1,price2)=>price2[1]-price1[1])
-}
-var sorted_prdt=sort_price(Prdt_Price)
-console.log(sorted_prdt);
-console.log(`costly product is ${sorted_prdt[0]}rs`);
+console.log(weather);
+var sortTemp= Object.entries(weather).sort((item1,item2)=>item2[1]-item1[1])
+console.log(sortTemp);
