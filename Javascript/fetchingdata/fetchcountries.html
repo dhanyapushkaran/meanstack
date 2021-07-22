@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <input type="text" id="country" placeholder="countryname">
+                <button onclick="fetchcountry()">Fetch Details</button>
+            </div>
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col"></div>
+            <div class="col" id="result">
+           
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+<script>
+    function displaydata(country){
+        let country_name=country[0].name;
+        let capital=country[0].capital
+        let population=country[0].population
+        let currency=country[0].currencies[0].name
+        let currency_symbol=country[0].currencies[0].symbol
+        let flag=country[0].flag
+
+        let html_data= `<div class="card" style="width: 18rem;">
+  <img src="${flag}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">${country_name}</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Capital: ${capital}</li>
+    <li class="list-group-item">Population: ${population}</li>
+    <li class="list-group-item">currency: ${currency}</li>
+    <li class="list-group-item">Currency Symbol: ${currency_symbol}</li>
+    
+  </ul>
+
+</div>`
+result.innerHTML=html_data
+    }
+    function fetchcountry(){
+        let country_name=country.value
+        let url= `https://api.openweathermap.org/data/2.5/weather?q=${country_name}&appid=69efdf577433f33c5b9a4798b066b934&units=metric`
+        fetch(url).then(res=>res.json()).then(data=>displaydata(data))
+    }
+</script>
+</html>

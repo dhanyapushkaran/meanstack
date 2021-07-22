@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Climate</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        .box {
+            border: 1px solid rgb(105, 105, 253);
+            height: 500px;
+            background-color: rgb(105, 105, 253);
+            color: white;
+            padding-top: 50px;
+            padding-left: 20px;
+        }
+        .cont{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col box">
+                <samp style="font-size: 20px;">Weather</samp>
+
+                <input type="text" id="city" style="background-color: rgb(105, 105, 253); color: white; ">
+                <!-- <button class="btn btn-primary" onclick="fetchClimate()">Search</button> -->
+                <button type="button" class="btn btn-light"
+                    style="background-color: rgb(105, 105, 253); border:rgb(105, 105, 253) ;"
+                    onclick="fetchClimate()"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="18"
+                        fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg></button>
+                <!-- <button type="button" class="btn-close" aria-label="Close" id="clear"></button> -->
+                <div class="cont">
+                    <h2 id=CName style="text-align: center;"></h2>
+                    <h6 id="Tzone" style="text-align: center;"></h6>
+                    <div class="row" style="padding-top: 10px;">
+                        <div class="col-6">
+                            <samp id="ic"> </samp>
+                        </div>
+                        <div class="col-6" style="padding-top: 40px;">
+                            <h3 id="temp" style="font-size:50;"></h3>
+                            <samp id="wtr"> </samp>
+                            <p id="dis"></p>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 10px;">
+                        <div class="col-6">
+                            <samp id="hum"></samp><br>
+                            <samp id="pres"></samp>
+                        </div>
+                        <div class="col-6">
+                            <span id="speed"></span><br>
+                            <span id="dirction"></span>
+                        </div>
+                    </div>
+
+
+                    <!-- <p id="icon"></p> -->
+
+                </div>
+
+
+            </div>
+            <div class="col"></div>
+        </div>
+    </div>
+</body>
+<script>
+    function displaydata(climate) {
+        let cityName = climate.name
+        let country = climate.sys.country
+        let timezone = climate.timezone
+        let tempr = climate.main.temp
+        let humidity = climate.main.humidity
+        let weather = climate.weather[0].main
+        let description1 = climate.weather[0].description
+        let icon1 = climate.weather[0].icon
+        let pressure1=climate.main.pressure
+        let windS=climate.wind.speed
+        let windD=climate.wind.deg
+
+
+
+        CName.innerHTML = `${cityName} ${country}`
+        //Contry.innerHTML=country
+        Tzone.innerHTML = `TimeZone: ${timezone}`
+        wtr.innerHTML = `weather: ${weather}`
+        dis.innerHTML = description1
+        temp.innerHTML = `${tempr} °C`
+        ic.innerHTML = `<img src="./icons/${icon1}.png" class="card-img-top" alt="..." style="width:150px; height:150px">`
+        hum.innerHTML=`Humidity: ${humidity}`
+        pres.innerHTML=`Pressure: ${pressure1}`
+        speed.innerHTML=`Wind Speed: ${windS}`
+        dirction.innerHTML=`Wind Direction: ${windD}`
+    }
+    function fetchClimate() {
+        let city_name = city.value;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${city_name}&appid=69efdf577433f33c5b9a4798b066b934&units=metric`
+        fetch(url).then(res => res.json()).then(data => displaydata(data))
+    }
+</script>
+
+</html>

@@ -16,7 +16,7 @@ class Bank{
         let account_details=this.accounts
         if(username in account_details){
             if(pswd==account_details[username]["password"]){
-                this.status=1;
+                status=1;
                 return username //success
             }
             else{

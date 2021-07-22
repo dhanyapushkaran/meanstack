@@ -1,5 +1,4 @@
-function checkSlot(){
-    let ag=document.querySelector("#age").value
-    let html_data=ag>18?"eligible":"not eligible"
-    alert(html_data)
-}
+let displayNumber=(num)=>inpt.value+=num;
+let evaluateExpression=()=>inpt.value=eval(inpt.value)
+let clearBox=()=>inpt.value="";
+let DeleteNumber=()=>inpt.value=inpt.value.slice(0,-1)
